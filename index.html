@@ -11,63 +11,69 @@
 <body>
    
     <header>
-        <div class="title">Coding Quiz Game<a href="highscores.html" class="highscores float-end" id="viewhighscore">View Highscores</a></div>
-        <div class="timer">Time: <span id=timer></span></div>
+        <a href="highscores.html" class="highscores float-end" id="viewhighscore">View Highscores</a></div>
+        <div class="timer">Time: <span id=time></span></div>
     </header>
     
     <!-- Welcome page -->
-    <main class="container text-center show" id="intro-container">
+    <main class="container text-center show" id="intro-card">
+
         <div class="container start">
             <h1>Web API: Coding Quiz Challenge</h1>
             <p>Answer the following questions within time-limit. Correct answers are worth 1 points!
                 Wrong answers answers substracts 1 point. You have 60 seconds!
             </p>
-            <button type="submit" class="btn btn-primary mb-3" id="Start-game">Start</button>
+            <button type="submit" class="btn btn-primary mb-3" id="start-button">Start</button>
+            
         </div>
 
     <!-- Question -->
-        <div class="container hide" id="question-container">
-            <div class="questions">
-                <div id="question"></div>
-                <div id="answer-buttons" class="btn-grid"></div>
+        <div hidden class="card" id="question-card">
+            
+            <h2 id="question-text"></h2>
+
+            <div id=quiz-options>
+                <button id=option0 class="button option-button"></button>
+                <button id=option1 class="button option-button"></button>
+                <button id=option2 class="button option-button"></button>
+                <button id=option3 class="button option-button"></button>
+            </div>
+
+            <div id=answer-div>
+
+                <hr>
+                <p id="result-text"></p>
+
             </div>
         </div>
 
-    <!-- Ending page and submit score page -->
-        <div class="hide container" id="ending-container">
-            <div class="end">
-                <div id="score-banner">
-                    <h1>finish!</h1>
-                </div>
-                <form class="container initials" id="initial-form">
-                    <p> Enter Initials:</p>
+    <!-- Results -->
+        <div hidden class="card" id="result-card">
+
+                <h1>Finish!</h1>
+                <p>Score is <span id=score></span>.</p>
+                <form class="inline-form" id="initial-form">
+                    <label for="initials">Enter Initials: </label>
                     <input type="text" name="initials" id="initials" class="text-input"/>
                     <button type="submit" class="btn btn-primary mb-3">Submit</button>
                 </form>
-            </div>
+
         </div>
+
     <!-- High Score Page -->
-    <div class="container hide"id="high-score-container">
-      <div class="high-scores container">
+    <div hidden class="card" id="high-score-card">
+
           <h1 class="high-score">High Scores</h1>
           <ol id="high-score-list" class="score-list"></ol>
-      <div>
+
+      <div class="inline-buttons">
           <button type="submit" class="btn btn-primary mb-3" id="back-up">Go back</button>
           <button type="submit" class="btn btn-primary mb-3" id="clear-high-scores">Clear high scores</button>
       </div>
-      </div>
-    </div>
 
-    <div class="hide" id="correct">
-        <h2>Correct :)!</h2>
     </div>
-    <div class="hide" id="wrong">
-        <h2>Wrong :( </h2>
-    </div>
-    </main>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
   <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
