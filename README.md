@@ -22,3 +22,9 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and my score
 ```
+
+## Website URL
+https://jb1756.github.io/Coding-Quiz_JB/
+
+## Screenshot
+![Screenshot of deployed code](/Screenshot%202023-03-20%20221531.png)
